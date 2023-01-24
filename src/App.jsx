@@ -19,7 +19,7 @@ function App() {
       <Grid item>
         <Companies users={users} />
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs md={4}>
         <Employees users={users} />
       </Grid>
     </Grid>
