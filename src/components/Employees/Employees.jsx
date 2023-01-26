@@ -2,6 +2,7 @@ import { TableContainer, TableBody, TableCell, Table, TableHead, TableRow } from
 import Employee from "./Employee";
 
 const Employees = ({ users }) => {
+  const filteredUsers = users.filter((user) => user.id % 2 === 0);
   return (
     <TableContainer>
       <Table>
@@ -17,7 +18,7 @@ const Employees = ({ users }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map((user) => {
+          {filteredUsers.map((user) => {
             const { id, address, company } = user;
 
             return <Employee key={id} id={id} address={address} company={company} />;
