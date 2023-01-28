@@ -2,8 +2,8 @@ import { TableContainer, TableBody, TableCell, Table, TableHead, TableRow } from
 import Email from "./Email";
 
 const Emails = ({ users }) => {
-  const emails = users.map((email) => email.email);
-  const sortedEmails = emails.sort().reverse();
+  const emails = users?.map((email) => email.email);
+  const sortedEmails = emails?.sort().reverse();
 
   return (
     <TableContainer>
@@ -14,7 +14,7 @@ const Emails = ({ users }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {sortedEmails.map((email, index) => {
+          {sortedEmails?.map((email, index) => {
             return <Email key={index} email={email} />;
           })}
         </TableBody>

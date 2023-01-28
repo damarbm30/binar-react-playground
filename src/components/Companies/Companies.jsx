@@ -2,8 +2,8 @@ import { TableContainer, TableBody, TableCell, Table, TableHead, TableRow } from
 import Company from "./Company";
 
 const Companies = ({ users }) => {
-  const companiesName = users.map((company) => company.name);
-  const sortedCompName = companiesName.sort();
+  const companiesName = users?.map((company) => company.name);
+  const sortedCompName = companiesName?.sort();
 
   return (
     <TableContainer>
@@ -14,7 +14,7 @@ const Companies = ({ users }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {sortedCompName.map((name, index) => {
+          {sortedCompName?.map((name, index) => {
             return <Company key={index} name={name} />;
           })}
         </TableBody>
